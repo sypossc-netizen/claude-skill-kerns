@@ -1,15 +1,16 @@
 # Kern's Framework — Reference
 
-Detailed reference for the `/kerns` skill. Load when you need the specifics of a step, the objective/verb templates, or the export recipe.
+Detailed reference for the `/kerns` skill. Load when you need the specifics of a step, the objective/verb templates, the running-note template, or the export recipe.
 
 ## Contents
 1. The six steps in detail
 2. SMART objective template
 3. Bloom's taxonomy verbs (match assessment to level)
 4. Learning theories (Step 4)
-5. ACGME core competencies + abbreviations
+5. Competency frameworks and assessment vocabulary
 6. Reverse-mapping pattern (existing changes → Kern's slots)
-7. Word `.doc` export recipe (Drive-safe)
+7. Running-note template and frontmatter
+8. Word `.doc` export recipe (cloud-sync-safe)
 
 ---
 
@@ -20,19 +21,19 @@ Kern's *Curriculum Development for Medical Education* — the standard text in h
 1. **Problem Identification & General Needs Assessment (GNA)**
    - Define the problem *broadly*: effect on learners, faculty, patients, health systems, society.
    - Current situation vs ideal situation vs environmental factors (people, methods).
-   - Environmental factors you can't change but must design around: accreditation (LCME/ACGME), board exams (USMLE/ABPath), GME/institutional governance.
+   - Environmental factors you can't change but must design around: accreditation bodies, licensing and board exams, institutional and postgraduate-training governance.
    - Stakeholders, focus groups.
 
 2. **Targeted Needs Assessment (TNA)**
    - Apply the GNA to *your* specific learners and environment.
-   - Build stakeholder relationships; identify learners; map the learning environment (course/rotation directors, faculty, CCC, PEC).
-   - Methods: surveys, interviews, focus groups — or existing data (course reviews, in-service/RISE scores, milestone data).
-   - Expect residents and faculty to disagree; the perception gap is itself a finding.
+   - Build stakeholder relationships; identify learners; map the learning environment (course and rotation directors, faculty, competency/evaluation committees).
+   - Methods: surveys, interviews, focus groups — or existing data (course reviews, in-training/in-service exam scores, milestone data).
+   - Expect learners and faculty to disagree; the perception gap is itself a finding.
 
 3. **Goals & Objectives**
    - Goals: broad, longitudinal.
    - Objectives: narrow, SMART; "who will do how much of what by when."
-   - Map to milestones/EPAs; competency-based, not time-based.
+   - Map to the local competency framework; competency-based, not time-based.
 
 4. **Educational Strategies (methods + content)**
    - Match verbs to Bloom's; assessment must match the cognitive level taught.
@@ -40,7 +41,7 @@ Kern's *Curriculum Development for Medical Education* — the standard text in h
    - Method trade-offs: textbooks (cheap, need motivation); video (complex items, screen fatigue); lectures (scale, quality varies); test-enhanced quizzing (needs practice); small-group (rich feedback, caps ~8/faculty).
 
 5. **Implementation**
-   - Political support: faculty own the curriculum — route to the right committee/associate dean, not the top of the org chart.
+   - Political support: faculty own the curriculum — route to the right committee or associate dean, not the top of the org chart.
    - Resources = people, materials, funding, space.
    - Document the change → scholarship. Run a pilot first.
    - Sequence: Admin → Resources → Support → Pilot → Implementation.
@@ -94,7 +95,11 @@ Remember → Understand → Apply → Analyze → Evaluate → Create.
 
 ---
 
-## 5. ACGME core competencies
+## 5. Competency frameworks and assessment vocabulary
+
+Ask which framework governs the user's program rather than assuming — objectives in Step 3 must map to *their* framework. Common ones:
+
+**ACGME core competencies** (US graduate medical education):
 
 | Abbrev | Competency |
 |---|---|
@@ -105,7 +110,11 @@ Remember → Understand → Apply → Analyze → Evaluate → Create.
 | ICS | Interpersonal & Communication Skills |
 | Prof | Professionalism |
 
-EPAs (Entrustable Professional Activities) rate real-world tasks on an entrustment scale (roughly: 1 = observe only → 5 = able to supervise others / unsupervised practice). Calibrate against an *ideal* entrustment scenario to resolve the common "nobody wants to give a 5 because there's rarely a truly unsupervised opportunity" problem.
+**Other frameworks you may encounter:** CanMEDS roles (Canada — Medical Expert, Communicator, Collaborator, Leader, Health Advocate, Scholar, Professional); the UK GMC *Good Medical Practice* domains and specialty curricula; AACN Essentials (US nursing); country- or profession-specific equivalents. Undergraduate/pre-licensure programs typically map to programmatic accreditation standards and licensing-exam blueprints instead.
+
+**EPAs (Entrustable Professional Activities)** rate real-world tasks on an entrustment scale (roughly: 1 = observe only → 5 = able to supervise others / unsupervised practice). Calibrate against an *ideal* entrustment scenario to resolve the common "nobody wants to give a 5 because there's rarely a truly unsupervised opportunity" problem.
+
+**In-training exams** are the usual objective baseline for a TNA and a ready-made pre/post outcome for Step 6. Every specialty has its own (ABIM ITE, RISE in pathology, ABSITE in surgery, and so on) — ask which one applies and whether subscore-level data is available, since a subscore matched to the rotation's domain is far more useful than a composite.
 
 ---
 
@@ -120,18 +129,67 @@ Then in Step 3, write a real SMART objective for each, and in Step 6, a real met
 
 ---
 
-## 7. Word `.doc` export recipe (Drive-safe)
+## 7. Running-note template and frontmatter
+
+One file, accreted across the session and across sessions. Name it for the curriculum — `<Curriculum Name> - Kerns Analysis.md` — with no dates in the filename (the frontmatter carries those).
+
+**Frontmatter.** If the workspace is a notes vault with its own schema, follow that schema instead and add the Kern's-specific keys to it. Otherwise use this portable minimum:
+
+```yaml
+---
+title: <Curriculum Name> — Kern's Analysis
+note_type: curriculum_analysis
+state: draft
+learner_level: <GME | UME | both | other>
+framework: <ACGME | CanMEDS | GMC | other>
+stakeholders: []
+phase: <framing | steps_1_2 | steps_3_4 | steps_5_6 | complete_pending_real_data | complete>
+last_updated: "YYYY-MM-DD"
+---
+```
+
+Keep `phase:` current — it is what a later session's Step 0e reads first.
+
+**Body structure:**
+
+```markdown
+# <Curriculum Name> — Kern's Analysis
+
+> **Legend:** `[R]` = real (an actual program decision or measured datum) · `[H]` = hypothetical (illustrative, grounded in literature, not yet measured)
+
+<One-paragraph framing: learners, scope, core problem, seed material.>
+
+## Changes already made
+<Verbatim capture of what the program has already changed, plus the reverse-mapping table from §6.>
+
+## Kern's Step 1 — Problem Identification & General Needs Assessment
+## Kern's Step 2 — Targeted Needs Assessment
+## Kern's Step 3 — Goals & Objectives
+## Kern's Step 4 — Educational Strategies
+## Kern's Step 5 — Implementation
+## Kern's Step 6 — Evaluation & Feedback
+
+## Next
+- [ ] <Tabled data to collect — what, from whom, and which `[H]` placeholder it replaces>
+- [ ] <Next action>
+```
+
+Mark each step heading with a parenthetical status when it isn't settled — *(provisional — pending X)*, *(blocked on existing data)*, *(hypothetical worked example)*. That parenthetical plus the `[R]`/`[H]` labels is what makes a resumed session able to tell finished work from placeholder without re-reading everything.
+
+---
+
+## 8. Word `.doc` export recipe (cloud-sync-safe)
 
 No pandoc/LibreOffice is needed. A `.doc` file whose contents are well-formed HTML opens natively in Word and Google Docs, with headings, bold, and tables rendered as real formatting (and no markdown hashmarks). Steps:
 
 1. Compose the document as an HTML file (`<html>…<head><style>…</style></head><body>…</body></html>`). Use `<h1>/<h2>/<h3>`, `<table>`, `<ul>`, `<blockquote>`; inline the CSS in `<head>`. Give it a `.doc` extension.
-2. **Write it to local scratch first** — not directly to the destination. Sandboxed file writes silently fail to reach Google Drive / network FUSE mounts (the write tool may even report success while nothing lands).
-3. **Copy into the destination via shell**, disabling the sandbox for that copy if the destination is a Drive/FUSE mount:
+2. **Write it to local scratch first** — not directly to the destination. Sandboxed file writes silently fail to reach cloud-sync and network mounts (Google Drive, OneDrive, Dropbox, SMB/NFS); the write tool may even report success while nothing lands.
+3. **Copy into the destination via shell**, disabling the sandbox for that copy if the destination is a synced or network mount:
    ```bash
    cp "<scratch>/<file>.doc" "<destination folder>/<file>.doc"
    ```
    Then `ls -la` the destination to confirm the byte size — don't trust a "created successfully" message alone.
-4. On a Mac, Google Drive mounts live at `~/Library/CloudStorage/GoogleDrive-<account>/My Drive/…`; a `~/My Drive` path is usually the same mount. Both resolve to the same files.
+4. Cloud mounts differ by platform: on macOS, Google Drive lives under `~/Library/CloudStorage/GoogleDrive-<account>/My Drive/…` (a `~/My Drive` path is usually a symlink to the same mount); on Windows it is typically a drive letter such as `G:\My Drive\`. Ask the user for the destination rather than guessing.
 
 Suggested inline stylesheet (clean, prints well, theme-neutral):
 ```css
