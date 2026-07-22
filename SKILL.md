@@ -1,24 +1,16 @@
 ---
 name: kerns
 description: >-
-  Guide a rotation, course, or curriculum through Kern's six-step model of
-  curriculum development, either one step at a time or drafted in full from
-  notes the user provides, producing a finished analysis-plan document exported
-  to Word. Use whenever the user wants to design, revamp, redesign, or formally
-  analyze a residency rotation, medical-student clerkship, lecture series, boot
-  camp, fellowship, or any health-professions curriculum — or says "Kern's",
-  "curriculum development", "needs assessment", "learning objectives / SMART
-  objectives", "EPA / milestone mapping", or is preparing a
-  curriculum-development reflection or portfolio piece. Also use to resume,
-  review, or continue an in-progress Kern's analysis from existing notes.
-  Trigger even when the user names only the rotation ("let's redesign our lab
-  medicine rotation") without saying "Kern's" — this is the right tool for
-  structured curriculum design.
+  Design, revise, or analyze a rotation, clerkship, course, or any
+  health-professions curriculum with Kern's six-step model: needs assessment,
+  SMART objectives, strategies, evaluation. Word output.
 ---
 
 # Kern's Curriculum Analysis
 
 Walk the user through Kern's six-step model of curriculum development and produce a finished, defensible analysis-plan document. Kern's exists to convert curricular change from **reactive → intentional, implicit → explicit, and siloed → aligned** — so the point of this skill is to make each design decision explicit and traceable, not to produce a plausible-looking document fast. A curriculum built without the stakeholders' data is "a rotation on paper."
+
+**When to use.** Designing, revamping, or formally analyzing any health-professions curriculum — residency rotations, medical-student clerkships, lecture series, boot camps, fellowships, courses — and whenever the user says "Kern's", "curriculum development", "needs assessment", "learning objectives / SMART objectives", "EPA / milestone mapping", or is preparing a curriculum-development reflection or portfolio piece. Also for resuming, reviewing, or continuing an in-progress Kern's analysis from existing notes. Curriculum-design intent alone ("let's redesign our lab medicine rotation") is enough — the user doesn't need to name Kern's.
 
 Full framework reference (the six steps in detail, Bloom's verbs, the SMART objective template, learning theories, competency frameworks, the running-note template, and the Word export recipe) lives in `references/kerns-framework.md`. Read it when you need the specifics; this file is the workflow.
 
